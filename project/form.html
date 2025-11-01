@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Predictor - Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Career Assessment</h1>
+        <p>Tell us about yourself to get personalized career suggestions.</p>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section id="input-section">
+            <h2>Your Profile</h2>
+            <form id="career-form">
+                <label for="skills">Skills (comma-separated):</label>
+                <input type="text" id="skills" placeholder="e.g., Python, JavaScript, Data Analysis" required>
+
+                <label for="interests">Primary Interest:</label>
+                <input type="text" id="interests" list="interests-list" placeholder="e.g., Technology, Data & Analytics, Design" required>
+                <datalist id="interests-list">
+                    <option value="technology">Technology</option>
+                    <option value="data">Data & Analytics</option>
+                    <option value="design">Design & Creativity</option>
+                    <option value="business">Business & Management</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="education">Education</option>
+                    <option value="finance">Finance</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="science">Science & Research</option>
+                    <option value="arts">Arts & Entertainment</option>
+                    <option value="environment">Environment & Sustainability</option>
+                    <option value="sports">Sports & Fitness</option>
+                    <option value="law">Law & Legal</option>
+                    <option value="hospitality">Hospitality & Tourism</option>
+                </datalist>
+
+                <label for="experience">Experience Level:</label>
+                <select id="experience">
+                    <option value="">Select experience</option>
+                    <option value="beginner">Beginner (0-2 years)</option>
+                    <option value="intermediate">Intermediate (2-5 years)</option>
+                    <option value="advanced">Advanced (5+ years)</option>
+                </select>
+
+                <label for="education">Education Level:</label>
+                <select id="education">
+                    <option value="">Select education</option>
+                    <option value="high-school">High School</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">PhD or Doctorate</option>
+                </select>
+
+                <label for="location">Preferred Location:</label>
+                <input type="text" id="location" placeholder="e.g., Mumbai, Remote, USA">
+
+                <label for="market-trend">Preferred Market Trend:</label>
+                <select id="market-trend" required>
+                    <option value="">Select a trend</option>
+                    <option value="high-growth">High Growth (e.g., AI, Renewable Energy)</option>
+                    <option value="stable">Stable (e.g., Healthcare, Education)</option>
+                    <option value="emerging">Emerging (e.g., Blockchain, VR)</option>
+                </select>
+
+                <button type="submit">Analyze My Profile</button>
+            </form>
+        </section>
+        <section id="results-section">
+            <h2>Your Career Matches</h2>
+            <div id="results"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
